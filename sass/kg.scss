@@ -1,0 +1,67 @@
+@mixin kgHeader($background, $width: 100%) {
+    background: $background;
+    width: $width;
+    padding: 10px 0px;
+    border-top: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    display:table;
+}
+
+.kg-wrap {
+    position: relative;
+}
+
+.kg-header {
+    @include kgHeader(#F9F9F9);
+}
+
+.kg-toolbar-text {
+    margin: 0 10px 0 0;
+    line-height: 40px;
+    float: left;
+}
+
+.kg-footer {
+    background: #F9F9F9;
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #DDDDDD;
+    border-right: 1px solid #DDDDDD;
+    border-left: 1px solid #DDDDDD;
+    display: inline-block;
+    font-size: 0.8em;
+}
+
+.kg-content {
+    overflow: none;
+}
+
+.kg-content .table {
+    margin-bottom: 0 !important;
+} 
+
+.kg-content-header-row th {
+    background-color: #F9F9F9;
+}
+
+.kg-content-header-row th:hover {
+    background-color: #DDDDDD;   
+}
+
+.kg-content-record-row td {
+    vertical-align: middle !important;
+}
+
+
+.kg-content-cell-checkbox, .kg-column-header-checkbox {
+    width: 30px;
+}
+
+.kg-content-cell-action, .kg-column-header-action {
+    width: 30px;
+}
+
+.kg-footer .page-input {
+    width: 60px;
+}
