@@ -8,10 +8,10 @@ module.exports = function(grunt) {
             //Concat all javascript files.
             'concat': {
                 'options': {
-                    'separator': ';'
+                    'separator': ";"
                 },
                'dist': {
-                   'src': ['lib/**/*.js'],
+                   'src': ['lib/*.js', 'lib/**/*.js', 'lib/!(.#*).js', 'lib/**/!(.#*).js'],
                    'dest': 'dist/<%= pkg.name %>.<%= pkg.version%>.js'
                }
             },
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             
             'watch': {
                 'scripts': {
-                    'files': ['lib/*.js'],
+                    'files': ['lib/*.js', 'lib/**/*.js'],
                     'tasks': ['concat', 'uglify'],
                     'options': {
                         'spawn':false
