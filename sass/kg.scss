@@ -65,3 +65,13 @@
 .kg-footer .page-input {
     width: 60px;
 }
+
+.kg-state-loading {
+    opacity: 0.4;
+    background: url('/images/spinners/48.gif') 50% 50% no-repeat;
+    min-height: 80px;
+} 
+
+.kg-hover:hover {
+    cursor:pointer;
+}
